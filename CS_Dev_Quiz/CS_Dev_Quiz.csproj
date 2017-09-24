@@ -51,6 +51,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\IDocumentReportGenerator.cs" />
     <Compile Include="Services\IDocumentSender.cs" />
+    <Compile Include="Services\Impl\Q2PrintFormGeneratorService.cs" />
     <Compile Include="Services\Impl\SimplePrintFormGeneratorService.cs" />
     <Compile Include="Services\Impl\SimpleReportGeneratorService.cs" />
     <Compile Include="Services\IPrintFormGenerator.cs" />

@@ -1,5 +1,8 @@
-﻿using System;
+﻿using CS_Dev_Quiz.Services;
+using CS_Dev_Quiz.Services.Impl;
+using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 
@@ -9,6 +12,7 @@ namespace CS_Dev_Quiz
     {
         static void Main(string[] args)
         {
+            Q2();
         }
 
         static void Q1()
@@ -44,6 +48,15 @@ namespace CS_Dev_Quiz
              *  
              *  Продемонстрировать на примере.
              */
+            IPrintFormGenerator pfgService = new Q2PrintFormGeneratorService();
+            var res = pfgService.GeneratePrintForm(new Model.Document() {
+                Id = 1,
+                PackageId = null,
+                Title = "Hello",
+                DocumentType = Model.DocumentType.Contract
+            });
+            foreach (var value in res)
+                Debug.WriteLine(value);
         }
 
         static void Q3()
